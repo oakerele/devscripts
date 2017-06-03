@@ -45,7 +45,7 @@ case "$actionAnswer" in
 
         echo
         read -p "Are you satisfied with the commits (y/n)? " pushAnswer
-        case "$commitAnswer" in
+        case "$pushAnswer" in
             y|Y )
                 # About to push to the remote
                 echo
