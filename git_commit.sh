@@ -43,10 +43,12 @@ case "$actionAnswer" in
         echo "Here's the status of your upstream branch"
         git log @{u}..
 
+        echo
         read -p "Are you satisfied with the commits (y/n)? " pushAnswer
         case "$commitAnswer" in
             y|Y )
                 # About to push to the remote
+                echo
                 echo "Note: Initially you will have to run 'git push -u origin branch_name' to set the upstream"
                 git push
             ;;
@@ -63,4 +65,5 @@ case "$actionAnswer" in
     ;;
 esac
 
-
+echo
+echo "That's it my dood! Code ON!!!'"
