@@ -26,7 +26,8 @@ case "$actionAnswer" in
                 echo
                 read message
                 if [ -z "$message" ]; then
-                    let message="Just a commit, nothing to see here!"
+                    message="Just a commit, nothing to see here!"
+                    echo "got here"
                 fi
                 git commit -m "$message"
             ;;
