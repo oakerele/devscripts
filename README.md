@@ -1,9 +1,9 @@
 # DevScripts
-All my scripts I use to make my development experience much easier, more to come
+All the scripts I use to make my development experience much easier, more to come
 
 ## Compatibility
 * OS must have Bash capabilities
-* Any OS that uses Bash (Ubunut, MacOSX, e.t.c)
+* Any OS that uses Bash (Linux, MacOS, e.t.c)
 
 ## Get my scripts
 `git clone https://github.com/oakerele/devscripts.git`
