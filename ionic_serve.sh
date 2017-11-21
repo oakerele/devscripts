@@ -2,4 +2,4 @@
 
 > /dev/null npm install
 > /dev/null npm rebuild node-sass
-> /dev/null ionic serve
+> /dev/null ionic serve -l
