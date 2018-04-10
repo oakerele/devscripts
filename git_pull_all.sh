@@ -1,19 +1,16 @@
 #!/bin/bash
 
-#REPOS=`/Users/tobidae/Documents/Projects/`
+REPOS=/Users/tobidae/Documents/Projects
 
-REPOS="$( cd "$( /Users/tobidae/Documents/Projects/ )" && pwd )"
-
-IFS=$'\n'
-echo $REPOS
-for GIT in `find $REPOS/ -name '*.git'`
-do
-    if [[ $GIT = *"node_modules"* ]]
+array=()
+while IFS=  read -r -u3 -d $'\0' REPLY; do
+    if [[ $REPLY = *"node_modules"* ]] || [[ $REPLY = *"buildroot"* ]]
 	then
 		echo "Skipping because it doesn't look like it has a .git folder."
     else
-		echo "Updating $GIT at $(date)"
-		cd "$GIT/"
+		echo "Updating $REPLY at $(date)"
+		cd $REPLY
+		# Go back one folder because it is currently in the .git folder 
         cd ..
 		git status
 		echo "Fetching"
@@ -23,5 +20,4 @@ do
 	fi
 	echo "Done at $(date)"
 	echo
-done
-
+done 3< <(find $REPOS -name '*.git' -print0)
