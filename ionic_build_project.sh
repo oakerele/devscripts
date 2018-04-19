@@ -10,4 +10,4 @@ echo "Adding iOS and Android to app"
 echo "Building APK for Android"
 > /dev/null ionic cordova build android
 
-echo "You can run the ionic_deploy_project script to push to a device"
+echo "You can run the ionic_deploy_project<deploy> script to push to a device"
